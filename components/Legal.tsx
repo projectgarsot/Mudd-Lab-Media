@@ -31,12 +31,12 @@ const Legal: React.FC = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === 'admin') {
+    if (password === 'petrides') {
       setIsAdmin(true);
       setShowLogin(false);
       setPassword('');
     } else {
-      alert('Λάθος κωδικός. Δοκιμάστε "admin" (δεν φημιζόμαστε για την ασφάλεια μας).');
+      alert('Λάθος κωδικός.');
     }
   };
 
