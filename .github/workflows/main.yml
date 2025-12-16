@@ -26,4 +26,4 @@ jobs:
         # THIS IS IMPORTANT: The folder where your build goes. 
         # For React/Vite it is usually 'dist' or 'build'
         local-dir: ./dist/ 
-        server-dir: ./public_html/
+
