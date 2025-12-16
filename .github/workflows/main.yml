@@ -1,0 +1,29 @@
+name: Build and Deploy to Hostinger
+
+on:
+  push:
+    branches: [ "main" ] # or "master" check your branch name
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Install and Build
+      run: |
+        npm install
+        npm run build 
+
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        # THIS IS IMPORTANT: The folder where your build goes. 
+        # For React/Vite it is usually 'dist' or 'build'
+        local-dir: ./dist/ 
+        server-dir: ./public_html/
