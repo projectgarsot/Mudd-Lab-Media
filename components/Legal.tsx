@@ -10,7 +10,6 @@ const details: CompanyDetail[] = [
   { label: 'Νομική Μορφή', value: 'Μονοπρόσωπη Ιδιωτική Κεφαλαιουχική Εταιρεία (Ι.Κ.Ε.)' },
   { label: 'Ημερομηνία Ίδρυσης', value: '30 Ιανουαρίου 2020' },
   { label: 'Διαχειριστής', value: 'Θεοφάνης Λαμπρόπουλος' },
-  { label: 'Κεφάλαιο', value: '€20.000,00' },
 ];
 
 const initialDocs: FinancialDoc[] = [
